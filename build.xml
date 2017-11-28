@@ -1,6 +1,6 @@
-<?xml version="1.0">
+<?xml version="1.0"?>
 <project name ="Rectangle-Build" default="main" basedir=".">
-  <property environment="env">
+  <property environment="env" />
 
   <!-- Sets variables which can later be used. -->
   <!-- The value of the property is accessed via ${} -->
@@ -10,7 +10,7 @@
 
   <path id="class.path">
     <pathelement location="./bin" />
-  <path>
+  </path>
 
   <!-- Deletes the existing build, docs and dist directory -->
   <target name="clean">
@@ -27,7 +27,7 @@
   </target>
 
   <!-- Compiles the java code(including the usage of library for JUnit -->
-  <target name="compile" depends="clean makedir">
+  <target name="compile" depends="clean, makedir">
     <javac srcdir="${src.dir}" destdir="${build.dir}">
       <classpath refid="class.path" />
     </javac>
@@ -37,7 +37,7 @@
   <target name="jar" depends="compile">
     <jar destfile="${dist.dir}\rectangle.jar" basedir="${build.dir}">
       <manifest>
-        <attribute name="Main-Class" value="Rectangulator">
+        <attribute name="Main-Class" value="Rectangulator" />
       </manifest>
     </jar>
   </target>          
