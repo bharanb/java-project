@@ -37,7 +37,7 @@
     <junit printsummary="yes" fork="true">
       <classpath refid="class.path" />
       <test name="RectangleTest" todir="${report.dir}" outfile="result">
- <!--       <formattter type="xml" /> -->
+         <formatter type="xml" />
       </test>
     </junit>    
   </target>          
